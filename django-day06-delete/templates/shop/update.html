@@ -1,0 +1,9 @@
+<h1>UPDATE PAGE</h1>
+<form method="POST">
+    {% csrf_token %}
+    <b>제품이름</b> <input name="sname" type="text" value="{{stitle.name}}"><br><br>
+    <b>제품가격</b> <input name="sprice" type="text" value="{{stitle.price}}"><br><br>
+    <textarea name="scon" cols="30" rows="10">{{stitle.content}}</textarea><br><br>
+    <button>제품수정</button>
+    <a href="{% url 'detail' stitle.id %}"><button type="button">수정취소</button></a>
+</form>

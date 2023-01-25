@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title> testdb index</title>
+    </head>
+    <body>
+        <hr>
+        <div>
+            <h1> 여기는 testdb index page 입니다.</h1>
+        </div>
+        <hr>
+        
+        {% if False %}
+            <h1>IF 출력</h1>
+        {% elif False %}
+            <h1>여기는 elif 출력</h1>
+            {{var1}}
+            {{var2}}
+        {% else %}
+            <h1>여기는 else 출력</h1>
+        {% endif %}
+        <hr>
+        {% for i in var2 %}
+            <table border="1">
+                <tr><td>{{ i }}</td></tr>
+            </table> 
+        {% endfor %}
+        <hr>
+        {% for i in var2 %}
+            <button>{{ i }}</button>
+        {% endfor %}
+        <hr>
+        {% for i in var2 %}
+            <li>{{ i }}</li> 
+        {% endfor %}
+        <hr>
+        <select>
+            {% for i in var2 %}
+            <option value="">{{i}}</option>
+        {% endfor %}
+        </select>
+        <hr>
+        {% for i in var3 %}
+        {%empty%}
+        <h1>반복이 동작하지 않을때 empty는 실행한다.</h1>
+        {% endfor %}
+        <hr>
+        {% for i in var2 %}
+            {{ forloop.counter }} <!-- 반복 횟수를 저장 -->
+            {{ forloop.counter0 }} <!--  0부터 반복 횟수 기록-->
+            {{ forloop.first }} <!--  첫번째만True-->
+            {{ forloop.last }} <!--  마지막만 True-->
+            <br>
+        {% endfor %}
+        <hr>
+        
+        <table border="1">
+            <tr>
+                <td>NO</td>
+                <td>NAME</td>
+                <td>AGE</td>
+                <td>SUBJECT</td>
+            </tr>
+        {% for i in tlists %} 
+            <tr>
+                <td> {{forloop.counter}}</td>
+                <td> {{i.name}}</td>
+                <td> {{i.age}}</td>
+                <td> {{i.subject}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>

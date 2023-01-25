@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Site</title>
+</head>
+<body>
+    <h1> Hello Book </h1>
+    <table>
+        <tr><td>NO</td><td>SITE</td><td>Button</td></tr>
+    {% for i in sites %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <!-- <td><a href="/book/detail/{{i.id}}">{{i.site_name}}</a></td> -->
+            <td><a href="{% url 'detail' i.id %}">{{i.site_name}}</a></td>
+            <td><a href="{{i.site_url}}"><button>이동</button></a></td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

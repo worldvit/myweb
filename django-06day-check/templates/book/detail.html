@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+</head>
+<body>
+    <hr>
+    <h1>{{abook.site_name}}</h1>
+    <hr>
+    <textarea disabled cols="50" rows="10">{{abook.site_url}}</textarea>
+    <hr>
+    <!-- <a href="/book/index/"><button>HOME</button></a> -->
+    <a href="{% url 'index' %}"><button>HOME</button></a>
+</body>
+</html>

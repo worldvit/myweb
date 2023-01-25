@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAIL page</title>
+</head>
+<body>
+    <hr>
+    <h1>TITLE: {{ stitle.name }}</h1>
+    <h1>PRICE: {{ stitle.price }}</h1>
+    <hr>
+    <textarea disabled cols="30" rows="10">
+        {{ stitle.content }}
+    </textarea>
+    <h1>LIKEY: {{ stitle.likey }}</h1>
+    <hr>
+    <a href="{% url 'index' %}"><button>HOME</button></a>
+    <a href="{% url 'delete' stitle.id %}"><button>DELETE</button></a>
+    <a href="{% url 'update' stitle.id %}"><button>UPDATE</button></a>
+</body>
+</html>

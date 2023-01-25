@@ -1,0 +1,1 @@
+c:\myweb\scripts\activate

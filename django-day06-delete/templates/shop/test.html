@@ -1,0 +1,14 @@
+<h1>GET METHOD</h1>
+<form>
+    <input name="var1" type="text"><br><br>
+    <textarea name="var2"></textarea><br><br>
+    <button>GET</button>
+</form>
+<hr>
+<h1>POST METHOD</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input name="var1" type="text"><br><br>
+    <textarea name="var2"></textarea><br><br>
+    <button>GET</button>
+</form>

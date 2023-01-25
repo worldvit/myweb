@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOARD index PAGE</title>
+</head>
+<body>
+    <hr>
+    <H1>Hello index BOARD</H1>
+    <hr>
+    <table border="1">
+        <tr>
+            <td>NO</td>
+            <td>TITLE</td>
+            <td>WRITER</td>
+            <td>HIT</td>
+        </tr>
+        {% for i in blist %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td><a href="{% url 'detail' i.id %}">{{ i.subject }}</a></td>
+            <td>{{ i.writer }}</td>
+            <td>{{ i.hit }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

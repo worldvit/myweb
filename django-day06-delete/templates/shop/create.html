@@ -1,0 +1,8 @@
+<h1>CREATE PAGE</h1>
+<form method="POST">
+    {% csrf_token %}
+    <b>제품이름</b> <input name="sname" type="text"><br><br>
+    <b>제품가격</b> <input name="sprice" type="text"><br><br>
+    <textarea name="scon" cols="30"></textarea><br><br>
+    <button>제품등록</button>
+</form>
