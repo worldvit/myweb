@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers List</title>
+</head>
+<body>
+    <hr>
+    <a href="{% url 'create' %}"><button>신규 선생님 등록</button></a>
+    <hr>
+    <h1> Teachers List </h1>
+    <table border="1">
+        <tr>
+            <td>NO</td>
+            <td>First Name</td>
+            <!-- <td>Last Name</td> -->
+            <!-- <td>Nick Name</td> -->
+            <!-- <td>Age</td> -->
+            <td>Phone</td>
+            <td>Address</td>
+            <!-- <td>Memo</td> -->
+        </tr>
+    {% for i in tlist %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td><a href="{% url 'detail' i.id %}">{{ i.fname }}</a></td>
+        <!-- <td>{{ i.lname }}</td> -->
+        <!-- <td>{{ i.nname }}</td> -->
+        <!-- <td>{{ i.age }}</td> -->
+        <td>{{ i.phone}}</td>
+        <td>{{ i.address }}</td>
+        <!-- <td>{{ i.memo }}</td> -->
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
+

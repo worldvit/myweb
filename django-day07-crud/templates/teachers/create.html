@@ -1,0 +1,13 @@
+<h1> New Teacher Register </h1>
+<form method="POST">
+    {% csrf_token %}
+    <b>이름</b><input type="text" name="fna"><br>
+    <b>성</b><input type="text" name="lna"><br>
+    <b>별명</b><input type="text" name="nna"><br>
+    <b>나이</b><input type="number" name="age"><br>
+    <b>전화번호</b><input type="text" name="pho"><br>
+    <b>주소</b><input type="text" name="add"><br>
+    <b>메모</b><textarea name="mem" cols="30" rows="10"></textarea><br>
+    <button>등록</button>
+    <a href="{% url 'index' %}"><button type="button">등록취소</button></a>
+</form>

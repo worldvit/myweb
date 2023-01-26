@@ -1,0 +1,22 @@
+<h1> Welcome SS Gallery </h1>
+<hr>
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <b>NAME</b><input type="text" name="gname"><br>
+    <b>IMAGE</b><input type="file" name="gimage"><br>
+    <b>MEMO</b><input type="text" name="gmemo"><br>
+    <button>사진등록</button>
+</form>
+<hr>
+<table border="1">
+    <tr><td>NO</td><td>NAME</td><td>IMAGE</td><td>MEMO</td><td>DELETE</td></tr>
+    {% for i in ilist %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ i.name }}</td>
+        <td><img src="{{ i.image.url }}"></td>
+        <td>{{ i.memo }}</td>
+        <td><a href="{% url 'delete' i.id %}"><button>삭제</button></a></td>
+    </tr>
+    {% endfor %}
+</table>

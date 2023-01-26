@@ -1,0 +1,29 @@
+<h1><b>SIGNUP PAGE</b></h1>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        <TR>
+            <TD><b>USERNAME</b></TD>
+            <TD><input type="text" name="uname"></TD>
+        </TR>
+        <TR>
+            <TD><b>PASSWORD</b></TD>
+            <TD><input type="password" name="upass"></TD>
+        </TR>
+        <TR>
+            <TD><b>USEREAMIL</b></TD>
+            <TD><input type="text" name="uemail"></TD>
+        </TR>
+        <TR>
+            <TD><b>FIRSTNAME</b></TD>
+            <TD><input type="text" name="ufn"></TD>
+        </TR>
+        <TR>
+            <TD><b>LASTNAME</b></TD>
+            <TD><input type="text" name="uln"></TD>
+        </TR>
+        <TR>
+            <TD colspan="2" align="center"><button>SIGNUP</button></TD>
+        </TR>
+    </table>
+</form>

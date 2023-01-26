@@ -1,0 +1,26 @@
+<h1>UPDATE PAGE</h1>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        <TR>
+            <TD><b>USERNAME</b></TD>
+            <TD><input type="text" disabled value="{{user}}"></TD>
+        </TR>
+        <TR>
+            <TD><b>USEREAMIL</b></TD>
+            <TD><input type="text" name="uemail" value="{{user.email}}"></TD>
+        </TR>
+        <TR>
+            <TD><b>FIRSTNAME</b></TD>
+            <TD><input type="text"  name="ufn" value="{{user.first_name}}"></TD>
+        </TR>
+        <TR>
+            <TD><b>LASTNAME</b></TD>
+            <TD><input type="text"  name="uln" value="{{user.last_name}}"></TD>
+        </TR>
+        <TR>
+            <TD><a href="{% url 'profile' %}"><button type="button">CANCEL</button></a></TD>
+            <TD><button>UPDATE</button></TD>
+        </TR>
+    </table>
+</form>

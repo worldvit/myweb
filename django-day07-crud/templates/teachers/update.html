@@ -1,0 +1,13 @@
+<h1> update page </h1>
+<form method="POST">
+{% csrf_token %}
+<b>이름</b><input type="text" name="fna" value="{{tlist.fname}}"><br>
+<b>성</b><input type="text" name="lna" value="{{tlist.lname}}"><br>
+<b>별명</b><input type="text" name="nna" value="{{tlist.nname}}"><br>
+<b>나이</b><input type="number" name="age" value="{{tlist.age}}"><br>
+<b>전화번호</b><input type="text" name="pho" value="{{tlist.phone}}"><br>
+<b>주소</b><input type="text" name="add" value="{{tlist.address}}"><br>
+<b>메모</b><textarea name="mem" cols="30" rows="10">{{tlist.memo}}</textarea><br>
+<button>수정</button>
+<a href="{% url 'detail' tlist.id %}"><button type="button">수정취소</button></a>
+</form>
