@@ -1,0 +1,41 @@
+<h1><b>SIGNUP PAGE</b></h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        <TR>
+            <TD><b>PICTURE</b></TD>
+            <TD><input type="file" name="uimage"><br></TD>
+        </TR>
+        <TR>
+            <TD><b>USERNAME</b></TD>
+            <TD><input type="text" name="uname"></TD>
+        </TR>
+        <TR>
+            <TD><b>PASSWORD</b></TD>
+            <TD><input type="password" name="upass"></TD>
+        </TR>
+        <TR>
+            <TD><b>USEREAMIL</b></TD>
+            <TD><input type="text" name="uemail"></TD>
+        </TR>
+        <TR>
+            <TD><b>FIRSTNAME</b></TD>
+            <TD><input type="text" name="ufn"></TD>
+        </TR>
+        <TR>
+            <TD><b>LASTNAME</b></TD>
+            <TD><input type="text" name="uln"></TD>
+        </TR>
+        <TR>
+            <TD><b>COMMENT</b></TD>
+            <TD><input type="text" name="ucom"></TD>
+        </TR>
+        <TR>
+            <TD><b>AGE</b></TD>
+            <TD><input type="number" name="uage"></TD>
+        </TR>
+        <TR>
+            <TD colspan="2" align="center"><button>SIGNUP</button></TD>
+        </TR>
+    </table>
+</form>

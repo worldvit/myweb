@@ -1,0 +1,8 @@
+<h1>PASSWORD UPDATE PAGE</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="password" placeholder="INPUT CRRRENT PASSWORD" size="30" name="cpass"><br>
+    <input type="password" placeholder="INPUT NEW PASSWORD" name="npass"><br>
+    <button>CHPASS</button>
+    <a href="{% url 'update' %}"><button type="button">CACEL</button></a>
+</form>

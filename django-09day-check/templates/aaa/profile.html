@@ -1,0 +1,31 @@
+<h1>PROFILE PAGE</h1>
+<h1>{{ request.user }}'s Profile</h1>
+<table>
+    <TR>
+        <TD><b>PICTURE</b></TD>
+        <TD><img src="{{ user.getpic }}" width="250" height="300"></TD>
+    </TR>
+    <TR>
+        <TD><b>USERNAME</b></TD>
+        <TD><input type="text" disabled value="{{user}}"></TD>
+    </TR>
+    <TR>
+        <TD><b>USEREAMIL</b></TD>
+        <TD><input type="text" disabled value="{{user.email}}"></TD>
+    </TR>
+    <TR>
+        <TD><b>FIRSTNAME</b></TD>
+        <TD><input type="text" disabled value="{{user.first_name}}"></TD>
+    </TR>
+    <TR>
+        <TD><b>LASTNAME</b></TD>
+        <TD><input type="text" disabled value="{{user.last_name}}"></TD>
+    </TR>
+    <TR>
+        <TD><a href="{% url 'index' %}"><button>HOME</button></a></TD>
+        <TD><a href="{% url 'delete' %}"><button>DELETE</button></a>
+            <a href="{% url 'update' %}"><button>UPDATE</button></a>
+            <a href="{% url 'chpass' %}"><button>CHANGEPASS</button></a>
+        </TD>
+    </TR>
+</table>

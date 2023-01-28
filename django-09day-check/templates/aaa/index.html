@@ -1,0 +1,9 @@
+<h1>MAIN PAGE</h1>
+{% if request.user.is_authenticated %}
+    {{ request.user }}님. 환영합니다. <br> <!--render가 넘겨준 값이다.-->
+    <a href="{% url 'profile' %}"><button>Profile</button></a>
+    <a href="{% url 'logout' %}"><button>LOGOUT</button></a>
+{% else %}
+    <a href="{% url 'signup' %}"><button>SIGNUP</button></a>
+    <a href="{% url 'login' %}"><button>LOGIN</button></a>
+{% endif %}
