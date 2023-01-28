@@ -13,4 +13,4 @@ class User(AbstractUser):
 #     def getpic(self):
 #         if self.pic:
 #             return self.pic.url
-#         return '/medis/noimage.jpg'
+#         return '/media/noimage.jpg'
