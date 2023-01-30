@@ -3,6 +3,7 @@ from local import views
 
 
 urlpatterns = [
-    path('jeju/', views.jeju),
-    path('seoul/', views.seoul),
+    path('', views.home, name='home'),
+    path('jeju/', views.jeju, name='jeju'),
+    path('seoul/', views.seoul,name='seoul'),
 ]

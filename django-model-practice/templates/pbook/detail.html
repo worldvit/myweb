@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+</head>
+<style>
+    footer {
+      text-align: center;
+      padding: 3px;
+      background-color: DarkSalmon;
+      color: white;
+    }
+</style>
+<body>
+    <div>
+        <h1>This is the DETAIL page in PBook.</h1>
+        {% for key,value in Phonebook.items %}
+            <li><b>{{key}}</b> : {{value}}</li><br>
+        {% endfor %}
+    </div>
+    <div>
+        {{Phonebook.birthday | date:'Y M D'}}<br>
+        {{Phonebook.birthday | date:'y m y'}}<br>
+        {{Phonebook.birthday | date:'Y년-m월-d일'}}<br>
+    </div>
+    <footer>
+        <p>Author: Hege Refsnes<br>
+        <a href="mailto:hege@example.com">hege@example.com</a></p>
+      </footer>
+
+</body>
+</html>
