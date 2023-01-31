@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+</head>
+<style>
+    .tr {
+        background-color: blue;
+        color: aliceblue;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .td {
+        width: 25%;
+        text-align: center;
+    }
+</style>
+<body>
+    <div>
+        <hr>
+            <h1>Members List</h1>
+        <hr>
+    </div>
+    <div>
+        <table border="1">
+           <tr class="tr"><td>ID</td><td>Last Name</td><td>First_Name</td><td>Email</td></tr>
+           {% for m in mlist %}
+            <tr><td class="td">{{ forloop.counter }}</td>
+            <td class="td">{{m.lname}}</td>
+            <td class="td">{{m.fname}}</td>
+            <td class="td">{{m.email}}</td></tr>
+           {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
